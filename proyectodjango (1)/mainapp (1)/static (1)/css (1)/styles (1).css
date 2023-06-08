@@ -1,0 +1,340 @@
+/* Estilos generales*/
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+.box p,.box h2,.box  h3, .box ul{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.box ul,.box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+.content{
+    line-height: 15px;
+}    
+.clearfix{
+    clear: both;
+    float: none;
+}
+body{
+background-color: beige;
+
+}
+
+/*`estilos cabecea */
+header{
+
+    width: 1212px;
+    height: 140px;
+    background-color: black;
+    margin: 0px auto;
+}
+
+#logotipo{
+width: 60%;
+height: 140px;
+margin: 0 auto;
+padding: 10px;
+}
+
+#logotipo img{
+display: block;
+float: left;
+width: 120px;
+margin-top: 10px;
+
+}
+
+#logotipo  h1{
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    color: darkcyan;
+
+
+
+}
+/* ESTILOS BARRA DE NAVEGACION*/
+
+NAV{
+    width: 1250px;
+    height: 45px;
+    margin: 0 auto;
+    background-color:#423f35;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+    
+}
+
+nav>ul{
+    list-style: none;
+    text-decoration: none;
+
+}
+
+nav>ul>li{
+    line-height: 40px;
+    float: left;
+}
+nav>ul>li >a{
+    display: block;
+    padding-left:  15px;
+    padding-right: 15px;
+    color: white;
+}
+
+nav>ul>li>a:hover{
+
+    background: #2ba977;
+    box-shadow: 0px 0px 5px #333333 inset;
+    color: white;
+    transition: all 300ms;
+}
+nav > ul > li > ul{
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+    color: white;
+    margin: 0px;
+    list-style: none;
+}
+
+nav > ul > li:hover > ul > li{
+    background: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 15px;
+    transition: all 300ms;
+}
+
+nav > ul > li:hover > ul > li > a{
+    color:black;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 15px;
+    transition: all 500ms;
+    
+
+}
+
+nav > ul > li:hover > ul > li > :hover{
+    display: block;
+    background-color: #2ba977;
+    border-bottom: 2px solid #d6d6d6;
+    padding-right: 58px;
+    padding-left: 5px;
+    line-height: 20px;
+    font-size: 15px;
+    transition: all 500ms;
+    
+
+}
+/*  esto es para cuando pasemos por arriba muestre el color  */
+/* para los enlaces ponerle color */
+nav > ul > li:hover > ul > li > :hover a{
+    color:white;
+    
+}
+.barra{
+
+    width: 1250px;
+    margin: 0 auto;
+   
+
+}
+
+.esquina-izquierda{
+
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2b2f32;
+}
+
+.esquina-derecha{
+
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2b2f32;
+    float: right;
+}
+.relleno-barra{
+    display: black;
+    width: 1250px;
+    background: gray;
+    height: 10px;
+    float: left;
+}
+/* estilos contenido central*/
+
+#content{
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+}
+
+.box{
+background: white;
+width: 95%;
+min-height: 930px;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 2px;
+margin: 0 auto;
+}
+.forms {
+    width: 20%;
+}
+.box form{
+    width: 26%;
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+
+}
+.box form input[type="text"],
+.box form input[type="email"],
+.box form input[type="password"],
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom:  10px;
+}
+.message,
+.alert-success{
+    padding: 20px;
+    background: #1f7d1f;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*para los botones*/
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin: 5px;
+    background: #2ba977;
+    border: 1px solid black;
+    color: white;
+    transition: 300ms all ;
+}
+/*para pasar por arriba del boton botones*/
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #20533f;
+    transition: 300ms all ;
+}
+.title{
+    color: black;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.date{
+    display:block;
+    margin-top: 15px;
+    margin-bottom:  15px;
+    color: #2ba977;
+}
+.content{
+    line-height: 75px;
+}
+
+
+.article-iten{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1p solid #a94f2b;
+    padding: 15px;
+    clear: both;
+}
+
+.article-iten.image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+.article-iten.image img{
+
+    width: 200px;
+    height: 200px;
+
+}
+
+.article-iten .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+
+}
+
+.article-iten h2{
+    display: block;
+    font-size: 30px;
+    color: #101111;
+    margin-bottom: 5px;
+}
+
+.article-iten span.date{
+    display: block;
+    font-size: 25px;
+    color: #0d1d17;
+    margin-bottom: 10px;
+
+}
+
+.btn{
+    padding: 10px;
+    background: #a94f2b;
+    color: aquamarine;
+    border:1px solid black;
+    display: block;
+    margin-top: 20px;
+    width: 120px;
+    text-align: center;
+}
+footer{
+    width: 1250px;
+    background-color: black;
+    border: 1px solid#333; 
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8" />
+<title>
+{%block title %}
+
+{%endblock %}
+R.S Developer Web
+</title>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+</head>
+
+<body>
+<!--cabecera de la pagina-->
+<header>
+<div id="logotipo">
+<!--logo Django-->
+<img src="{%static 'images/rs.png.jpg'%}"/>
+
+<h1> R.S Developer Web  </h1>
+</div>
+
+
+
+</header>
+
+<nav>
+<ul>
+
+    
+<li>
+<a href="{% url 'index'%}">Inicio</a>
+</li>
+
+{% for category in categories %}
+
+<li>
+<a href="{% url 'category' category.0 %}">{{category.1}}</a>
+</li>
+{% endfor %}
+</ul>
+
+
+
+
+
+</ul>
+</nav>
+<div class="barra">
+<span class="esquina-izquierda"></span>
+<span class="relleno-barra"></span>
+<span class="esquina-derecha"></span>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="box">
+<!-- para sacar los datos de las categorias -->
+<!--{{ids}}--->
+{% block content %}
+<!--codigo que viene de templates-->
+<strong>Contenido del bloque original!!!</strong>
+{% endblock %}
+</div>
+
+
+
+</div>
+
+<footer>
+R.S Developer Web &copy; Derechos Reservados- {% now "d/m/y "%}
+</footer>
+</body>
+
+<html>

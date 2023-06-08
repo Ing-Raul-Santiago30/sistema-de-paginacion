@@ -1,0 +1,11 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title%} {{ category.name}} {% endblock %} 
+
+{% block content%}
+    <h1 class="title">{{ category.name}}</h1>
+    <!--DESCRIPCION DE LA CATEGORIA -->
+    <P> {{category.description}}</p>
+    <!-- esto esta relacionado con los modelos objeto categoria con el objeto articulo -->
+    {% include 'articles/articles.html' with articles=category.articles.all%}
+{% endblock%}    

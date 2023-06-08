@@ -1,0 +1,25 @@
+<div class="pagination">
+ <!-- esto me va ah indicar si tengo que ir al boton de atras o no-->
+{%  if articles.has_previous  %}
+<!---laquo es una flechita a la derecha--->
+<a href="?page=1">&laquo; primero</a>
+<a href="?page={{ articles.previous_page_number}}">
+Anterior
+</a>
+{% endif %}
+<!--para poner el numero de pagina 1 de 3 por ejemplo--->
+<span class="actual">
+pagina {{articles.number}} de {{articles.paginator.num_pages}}
+</span>
+{% if articles.has_next %}
+
+
+<a href="?page={{articles.next_page_number}}">
+siguiente
+</a>
+
+<a href="?page={{articles.paginator.num_pages}}">ultima &laquo;</a>
+
+{% endif %}
+
+</div>

@@ -1,0 +1,52 @@
+ {% for article in articles %}
+        
+            <article class="article-iten">
+
+            <!-- abrir una condicion para comprobar a ver si existe una imagen-->
+            {% if  article.image != 'null' and article.image.url  %}
+
+                    <div class="image">
+
+                <img src="{{article.image.url}}"
+                title="exibicion de ropas "
+                width="290"/>
+                    </div>
+
+            {% endif %}
+            <div class="data">
+            <h2> 
+            <a href="{% url 'article' article.id%}">{{article.title}}
+            </h2>
+            <p>
+            {% for category in article.categories.all %}
+            <a href= "{% url 'category' category.id %}">{{category.name}}</a>
+<!-- para sacar el numero del indice  hacer separacion -->
+            {% if foloop.counter < article.categories.all|length%}
+            <!--mostrar lo que queramos el guion-->
+            {{'-'}}
+            {% endif%}
+            {% endfor%}
+            </p>
+            <span class ="date">
+            {{article.user.first_name}}  {{article.user.last_name}}
+            |
+
+            <!-- la fecha-->
+            <span>{{article.created_at}}</span>
+            <!--para poner si es publico o privado-->
+           <!--- {% if articulo.public%}
+            <strong> publicado</strong>
+            {% else %}
+            <strong> privado</strong>
+
+            {% endif %} -->
+            <p> {{ article.content | safe}}
+        
+            
+            </p>
+            </div>
+            
+            <div class="clearfix"></div>
+            </article>
+        {% endfor %}
+   
